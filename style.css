@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900|Open+Sans:400,400i,800,900|Lexend+Deca:300,400i,700,900&display=swap');
+
+
+h4 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: #37474F;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1em;
+}
+
+leg {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+}
+
+body {
+
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+}
+
+#icons {
+  display: none;
+}
+
+#navbar {
+  background-color: white;
+/*   height: 100px; */
+  width: 100%;
+  display: flex;
+/*   position: fixed; */
+  flex-direction: column;
+  padding: 40px;
+  margin: -10px -10px -20px -10px;
+/*   margin-top: 20px; */
+  
+/*     display: flex;
+  background-color: #333745;
+  margin: -10px -10px 0 -10px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  font-family: Lato, sans serif;
+  font-weight: 400;
+  text-transform: ; */
+}
+
+.navbar-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  margin-bottom: -10px;
+}
+
+@media screen and (min-width: 800px) {
+  #navbar {
+  height: 100%;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  padding: 40px;
+  margin-top: 20px;
+  }
+  .navbar-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #icons {
+   display: inline;
+  }
+  
+  #logo {
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #slideshow {
+  position: relative;
+  margin-left: 180px;
+/*   padding: 20px; */
+  background-color: white;
+  width: 100%;
+}
+  
+  #content {
+  position: relative;
+  background-color: white;
+  height: calc(100vh - 200px);
+}
+  
+  #box {
+  display: flex;
+  flex-direction: row;
+}
+}
+
+.navlinks {
+  padding: 3px;
+  padding-right: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #37474F;
+}
+
+#content {
+/*   position: relative; */
+  background-color: white;
+  height: calc(100vh - 300px);
+}
+
+@media screen and (min-width: 800px) {
+  #content {
+/*   position: relative; */
+  background-color: white;
+  height: calc(100vh - 200px);
+}
+  .img {
+  margin-right: 10px;
+  margin-left: 10px;
+  max-height: 100%;
+  max-width: 80%;
+  flex: 0 0 auto;
+}
+}
+
+#slideshow {
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+}
+
+
+.showcase {
+  text-align: center;
+  flex: 0 0 auto;
+  height: 100%;
+  color: #37474F;
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 0.6;
+}
+
+
+
+leg {
+  font-size: 0.8em;
+}
+
+.img {
+  margin: auto;
+  max-height: 100%;
+  max-width: 80%;
+  flex: 0 0 auto;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Add a transparency effect for thumbnail images */
+.demo {
+  opacity: 0.6;
+  margin: 3px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#content-row {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
