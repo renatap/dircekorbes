@@ -24,28 +24,17 @@ var obras = [
 ]
 
 
+$(document).ready(function(){
 
 $.each(obras, function(i, value) {
   $("#content").append("<div class='showcase'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
   $("#content-row").append("<div class='thumbnails'><img class='demo cursor' src='" + obras[i].url + "'style='height:100px' onclick='currentSlide(" + (i + 1) + ")' alt='" + obras[i].nome + "'>")
 }
 );
-
-
-
+showSlides(slideIndex);
+});
 
 var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   var i;
@@ -62,3 +51,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function plusSlides(n) {showSlides(slideIndex += n)};
+
+function currentSlide(n) {showSlides(slideIndex = n)};
