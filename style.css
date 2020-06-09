@@ -27,6 +27,7 @@ body {
 #box {
   display: flex;
   flex-direction: column;
+  height:100%;
 }
 
 #icons {
@@ -36,7 +37,7 @@ body {
 #navbar {
   background-color: white;
 /*   height: 100px; */
-  width: 100%;
+  width: 85vw;
   display: flex;
 /*   position: fixed; */
   flex-direction: column;
@@ -95,6 +96,7 @@ body {
 /*   padding: 20px; */
   background-color: white;
   width: 100%;
+  height: 100vh;
 }
   
   #content {
@@ -107,6 +109,8 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+
 }
 
 .navlinks {
@@ -121,7 +125,7 @@ body {
 #content {
 /*   position: relative; */
   background-color: white;
-  height: calc(100vh - 300px);
+  height: calc(85vh - 200px);
 }
 
 @media screen and (min-width: 800px) {
@@ -137,13 +141,26 @@ body {
   max-width: 80%;
   flex: 0 0 auto;
 }
+
+  .prev,
+  .next {
+  margin-top: -50px;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .prev,
+  .next {
+  margin-top: -120px;
+}
 }
 
 #slideshow {
   position: relative;
-  padding: 20px;
+  /* padding: 20px; */
   background-color: white;
   width: 100%;
+  height: 99vh;
 }
 
 
@@ -152,17 +169,20 @@ body {
   flex: 0 0 auto;
   height: 100%;
   color: #37474F;
-  display: none;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
 }
 
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  padding: 10px;
   color: black;
   font-weight: bold;
   font-size: 20px;
@@ -173,7 +193,7 @@ body {
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  /* border-radius: 3px 0 0 3px; */
 }
 
 .prev {
