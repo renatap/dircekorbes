@@ -42,18 +42,7 @@ body {
 /*   position: fixed; */
   flex-direction: column;
   padding: 40px;
-  margin: -10px -10px -20px -10px;
-/*   margin-top: 20px; */
-  
-/*     display: flex;
-  background-color: #333745;
-  margin: -10px -10px 0 -10px;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  font-family: Lato, sans serif;
-  font-weight: 400;
-  text-transform: ; */
+  margin: -30px -10px -20px -10px;
 }
 
 .navbar-2 {
@@ -65,7 +54,7 @@ body {
   margin-bottom: -10px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   #navbar {
   height: 100%;
   display: flex;
@@ -125,14 +114,14 @@ body {
 #content {
 /*   position: relative; */
   background-color: white;
-  height: calc(85vh - 200px);
+  height: calc(100vh - 180px);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   #content {
 /*   position: relative; */
   background-color: white;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 20px);
 }
   .img {
   margin-right: 10px;
@@ -148,10 +137,10 @@ body {
 }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .prev,
   .next {
-  margin-top: -120px;
+  margin-top: -50px;
 }
 }
 
