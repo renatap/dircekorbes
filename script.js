@@ -27,8 +27,8 @@ var obras = [
 $(document).ready(function(){
 
 $.each(obras, function(i, value) {
-  $("#content").append("<div class='showcase'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
-  $("#content-row").append("<div class='thumbnails'><img class='demo cursor' src='" + obras[i].url + "'style='height:100px' onclick='currentSlide(" + (i + 1) + ")' alt='" + obras[i].nome + "'>")
+  $("#content").append("<div class='showcase fade'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
+  // $("#content-row").append("<div class='thumbnails'><img class='demo cursor' src='" + obras[i].url + "'style='height:100px' onclick='currentSlide(" + (i + 1) + ")' alt='" + obras[i].nome + "'>")
 }
 );
 showSlides(slideIndex);
@@ -36,21 +36,29 @@ showSlides(slideIndex);
 
 var slideIndex = 1;
 
-function showSlides(n) {
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("showcase");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slides[slideIndex-1].style.display = "flex";
+//   setTimeout(showSlides, 20);
+// }
+
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("showcase");
-  var dots = document.getElementsByClassName("demo");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "flex";
-  dots[slideIndex-1].className += " active";
-}
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+} 
 
 function plusSlides(n) {showSlides(slideIndex += n)};
 
