@@ -12,7 +12,7 @@ var obras = [
     material: '',
   }, {
     url: 'https://i.postimg.cc/J46hdX8J/11-Senza-ti-tolo-150x100-acrilica-2012.jpg',
-    nome: '',
+    nome: 'keke',
     data: '',
     material: '',
   }, {
@@ -48,7 +48,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
 }
 
