@@ -41,13 +41,13 @@ body {
 
 #navbar {
   background-color: white;
-/*   height: 100px; */
-
+  /* height: 100px; */
   display: flex;
 /*   position: fixed; */
   flex-direction: column;
   margin: 00px -10px 60px -10px;
   text-align: center;
+  flex-grow: 1;
 }
 
 .navbar-2 {
@@ -71,7 +71,7 @@ body {
 #content {
 /*   position: relative; */
   background-color: white;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
 }
 
 #slideshow {
@@ -79,7 +79,8 @@ body {
   /* padding: 20px; */
   background-color: white;
   width: 100%;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
+  flex-grow: 4;
 }
 
 .showcase {
@@ -245,8 +246,8 @@ body {
   /* @media screen and (min-width: 1000px) { */
     #content {
   /*   position: relative; */
-    background-color: white;
-    height: calc(100vh - 200px);
+    background-color: yellow;
+    /* height: calc(100vh - 200px); */
   }
     .img {
     margin-right: 10px;
