@@ -8,6 +8,7 @@ h4 {
   font-weight: 300;
   letter-spacing: 3px;
   margin-bottom: 20px;
+  margin-top: 5vh;
   color: #37474F;
 }
 
@@ -41,13 +42,14 @@ body {
 
 #navbar {
   background-color: white;
-/*   height: 100px; */
-
+  /* height: 100px; */
   display: flex;
 /*   position: fixed; */
   flex-direction: column;
-  margin: 00px -10px 60px -10px;
+  margin: 00px 0px 1em 0px;
   text-align: center;
+  /* flex-grow: 1; */
+  height: 20%;
 }
 
 .navbar-2 {
@@ -61,7 +63,7 @@ body {
 
 .navlinks {
   padding: 3px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
   font-family: "Roboto", sans-serif;
   font-size: 1.5m;
   font-weight: 300;
@@ -71,7 +73,7 @@ body {
 #content {
 /*   position: relative; */
   background-color: white;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
 }
 
 #slideshow {
@@ -79,7 +81,9 @@ body {
   /* padding: 20px; */
   background-color: white;
   width: 100%;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
+  /* flex-grow: 5; */
+  height: 80%;
 }
 
 .showcase {
@@ -194,7 +198,7 @@ body {
   position: fixed;
   flex-direction: column;
   padding: 40px;
-  margin-top: 20px;
+  /* margin-top: 20%; */
   text-align: left;
   }
 
@@ -238,7 +242,9 @@ body {
   .next {
     margin-top: -50px;
   }
- 
+  h4 {
+    margin-top: 0px;
+  }
 }
 
 @media only screen and (orientation: portrait) {
@@ -246,7 +252,7 @@ body {
     #content {
   /*   position: relative; */
     background-color: white;
-    height: calc(100vh - 200px);
+    /* height: calc(100vh - 200px); */
   }
     .img {
     margin-right: 10px;
@@ -263,7 +269,7 @@ body {
 
   #navbar {
     text-align: center;
-    width: 100vw;
+    /* width: 100vw; */
   }
 
     .navbar-2 {
