@@ -4,7 +4,7 @@
 
 h4 {
   font-family: "Raleway", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 300;
   letter-spacing: 3px;
   margin-bottom: 20px;
@@ -40,6 +40,7 @@ body {
   display: none;
 }
 
+
 #navbar {
   background-color: white;
   /* height: 100px; */
@@ -52,22 +53,45 @@ body {
   height: 20%;
 }
 
-.navbar-2 {
+.navbar-portrait {
   display: flex;
+  flex-direction: column;
+}
+
+.navbar-landscape {
+  display: none;
+}
+
+.bottom-bar {
+  z-index: 10;
+  background-color: white;
+  /* height: 100px; */
+  display: flex;
+/*   position: fixed; */
   flex-direction: row;
+  justify-content: center;
+  margin: 1em 0px 0.5em 0px;
+  text-align: center;
+  /* flex-grow: 1; */
+  /* height: 20%; */
 }
 
 #logo {
   margin-bottom: -10px;
+  z-index: 10;
 }
 
-.navlinks {
-  padding: 3px;
+.navlinks-portrait {
+  padding: 15px;
   /* padding-right: 15px; */
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5m;
-  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
   color: #37474F;
+}
+
+.navlinks-landscape {
+  display: none;
 }
 
 #content {
@@ -201,12 +225,32 @@ body {
   /* margin-top: 20%; */
   text-align: left;
   }
+  
+  .navbar-portrait {
+    /* display: flex;
+    flex-direction: column; */
+    display: none;
+  }
 
-  .navbar-2 {
+  .navbar-landscape {
     display: flex;
     flex-direction: column;
   }
-  
+
+  .navlinks-portrait {
+    display: none;
+  }
+
+  .navlinks-landscape {
+    display: flex;
+    padding: 3px;
+    /* padding-right: 15px; */
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #37474F;
+  }
+
   #icons {
    display: inline;
    margin-top: 10px;
@@ -245,6 +289,10 @@ body {
   h4 {
     margin-top: 0px;
   }
+
+  .bottom-bar {
+    display: none;
+  }
 }
 
 @media only screen and (orientation: portrait) {
@@ -272,7 +320,38 @@ body {
     /* width: 100vw; */
   }
 
-    .navbar-2 {
+    .navbar-portrait {
+      z-index: 8;
+      text-align: center;
       justify-content: center;
+      align-content: center;
+      position: absolute;
+      background-color: white;
+      width: 96%;
+      height: 96%;
+    }
+
+    .navlinks-landscape {
+      display: none;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
+
+    #menu {
+      display: none;
+  }
+
+  .icon {
+    background: white;
+    /* display: block; */
+    /* right: 0px;
+    top: 0; */
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0.5;
+    height: 20px;
+  }
+    #logo {
+      display: inline;
     }
   }
