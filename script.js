@@ -27,7 +27,7 @@ var obras = [
 $(document).ready(function(){
 
 $.each(obras, function(i, value) {
-  $("#content").append("<div class='showcase fade'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
+  $("#content").append("<div class='showcase fade'><div><img src='" + obras[i].url + "' class='img' /></div><br><div class='leg'><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div></div>");
   // $("#content-row").append("<div class='thumbnails'><img class='demo cursor' src='" + obras[i].url + "'style='height:100px' onclick='currentSlide(" + (i + 1) + ")' alt='" + obras[i].nome + "'>")
 }
 );
