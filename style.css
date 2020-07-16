@@ -155,7 +155,7 @@ body {
 }
 
 .img {
-  margin: auto;
+  /* margin: auto; */
   max-height: 80%;
   max-width: 80%;
   flex: 0 0 auto;
