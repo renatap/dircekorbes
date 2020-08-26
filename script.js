@@ -28,25 +28,17 @@ $(document).ready(function(){
 
 $.each(obras, function(i, value) {
   $("#content").append("<div class='showcase fade'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
-  // $("#content-row").append("<div class='thumbnails'><img class='demo cursor' src='" + obras[i].url + "'style='height:100px' onclick='currentSlide(" + (i + 1) + ")' alt='" + obras[i].nome + "'>")
 }
 );
 showSlides(slideIndex);
+
+$.each(obras, function(i, value) {
+  $("#gallery").append("<div class='imagemGaleria'><img src='" + obras[i].url + "' class='img' /><br></div>");
+}
+);
 });
 
 var slideIndex = 1;
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("showcase");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slides[slideIndex-1].style.display = "flex";
-//   setTimeout(showSlides, 20);
-// }
 
 function showSlides() {
   var i;
