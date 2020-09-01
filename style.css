@@ -33,7 +33,8 @@ body {
 #box {
   display: flex;
   flex-direction: column;
-  height:100%;
+  /* height:100%; */
+  /* turn on again if this breaks the slideshow */
 }
 
 #icons {
@@ -205,13 +206,18 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: auto;
+
+
 }
 
 .imagemGaleria {
-
+  max-width: 100%;
   text-align: center;
-  padding: 5vw;
+  margin: 1em;
+  /* padding: 2em 1em; */
+  overflow: hidden;
 }
+
 
 .fade {
   -webkit-animation-name: fade;
@@ -298,7 +304,16 @@ body {
 
   }
 
+  .imgGallery-vertical {
+    max-width: 100%;
+    max-height: 100%
+  }
 
+  .imgGallery-horizontal {
+    /* max-height: 100%; */
+    max-width: 140%;
+  }
+ 
   
   #content {
     position: relative;
@@ -323,6 +338,16 @@ body {
   .bottom-bar {
     display: none;
   }
+
+  #gallery {
+    position: relative;
+    margin-left: 200px;
+    grid-template-columns: auto auto auto;
+    }
+
+    .imagemGaleria {
+      max-height: calc((100vw - 200px)/4);
+    }
 }
 
 @media only screen and (orientation: portrait) {
@@ -338,6 +363,16 @@ body {
     max-height: 100%;
     max-width: 80%;
     flex: 0 0 auto;
+  }
+
+  .imgGallery-vertical {
+    max-width: 100%;
+    max-height: 100%
+  }
+
+  .imgGallery-horizontal {
+    /* max-height: 100%; */
+    max-width: 140%;
   }
   
     .prev,
@@ -388,12 +423,31 @@ body {
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 600px) and (orientation: portrait) {
     #gallery {
     grid-template-columns: auto auto;
     }
 
     #navbar {
       height: 10%
+    }
+
+    .imagemGaleria {
+      max-height: calc((100vw - 200px)/2);
+      min-width: calc((100vw - 200px)/2);
+    }
+  }
+
+  @media (min-width: 1000px) and (orientation: landscape) {
+    #gallery {
+    grid-template-columns: auto auto auto auto;
+    }
+
+    #navbar {
+      height: 10%
+    }
+
+    .imagemGaleria {
+      max-height: calc((100vw - 200px)/6);
     }
   }

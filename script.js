@@ -64,3 +64,10 @@ function hamburgerMenu() {
     x.style.display = "flex";
   }
 }
+
+// make gallery creator: it will append the images like in the slideshow,
+
+// make second slideshow script for the gallery section: when I click at a collection image, 
+// it takes me to a slideshow page where images don't change automatically, and the colection thumbnails show at the bottom for larger screens.
+
+// add hover to collection links that shows collection name and year. also add links.
