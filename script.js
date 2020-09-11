@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 $.each(obras, function(i, value){ 
   $("#content").append("<div class='showcase fade'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
-  $("#gallery").append("<div class='imagemGaleria'><div class='legendaGaleria'><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</div><img src='" + obras[i].url + "' class='imgGallery-" + obras[i].orientation + "' /></div>");
+  $("#gallery").append("<div class='imagemGaleria'><img src='" + obras[i].url + "' class='imgGallery-" + obras[i].orientation + "' /><div class='legendaGaleria'>" + obras[i].nome + ", " + obras[i].ano + "</div></div>");
 }
 );
 showSlides(slideIndex);
@@ -98,3 +98,9 @@ function hamburgerMenu() {
 // it takes me to a slideshow page where images don't change automatically, and the colection thumbnails show at the bottom for larger screens.
 
 // fazer a legenda aparecer só quando o mouse vai em cima (tentei javascript e nao deu. tentar com css de novo)
+
+// fazer com que em telas menores, quando na horizontal aparece apenas 1 ou duas colunas.
+
+// pegar as coleções de imagens e começar de fato a alimentar o site, pra ver como vou apresentar as seções, como vou separar os JSON em partes.
+
+// fazer o JSON um arquivo separado que a Dirce possa preencher.

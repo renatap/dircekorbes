@@ -24,13 +24,17 @@ leg {
 }
 
 .legendaGaleria {
+  width: 100%;
   font-family: "Railway", sans-serif;
   font-size: 0.9em;
   background-color: grey;
   text-align: center;
-  position: absolute;
+  /* position: absolute; */
 }
 
+.legendaGaleria:hover {
+  background-color: red;
+}
 
 body { 
   transition:all .2s linear; 
@@ -42,8 +46,12 @@ body {
 #box {
   display: flex;
   flex-direction: column;
-  /* height:100%; */
-  /* turn on again if this breaks the slideshow */
+  height:100%;
+}
+
+#boxGallery {
+  display: flex;
+  flex-direction: column;
 }
 
 #icons {
@@ -323,7 +331,6 @@ body {
     max-width: 140%;
   }
  
-  
   #content {
     position: relative;
     background-color: white;
@@ -331,7 +338,7 @@ body {
     align-items: center;
   }
   
-  #box {
+  #box, #boxGallery {
     display: flex;
     flex-direction: row;
   }
