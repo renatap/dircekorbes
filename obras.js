@@ -1,4 +1,6 @@
-{
+export { data };
+
+var data = {
     "obras" : [
     {
         "url": "https://i.postimg.cc/gjJx1y06/2-Pelas-Ruas-de-Bruxelas-0-98x0-98-bx-res.jpg",
@@ -52,4 +54,6 @@
         "orientation": "vertical"
       }
     ]
-}
+};
+
+
