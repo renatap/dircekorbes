@@ -104,3 +104,5 @@ function hamburgerMenu() {
 // pegar as coleções de imagens e começar de fato a alimentar o site, pra ver como vou apresentar as seções, como vou separar os JSON em partes.
 
 // fazer o JSON um arquivo separado que a Dirce possa preencher.
+
+// como deixar o site mais modular: em vez de colocar o menu em todas as paginas, linkar uma função JS que faz o append do menu.
