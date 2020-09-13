@@ -1,63 +1,11 @@
-var obras = [
-  {
-    url: 'https://i.postimg.cc/gjJx1y06/2-Pelas-Ruas-de-Bruxelas-0-98x0-98-bx-res.jpg',
-    nome: 'Pelas Ruas de Bruxelas',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  },
-  {
-    url: 'https://i.postimg.cc/Jn5r3DKs/21-de-IMG-1093.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'horizontal',
-  }, {
-    url: 'https://i.postimg.cc/J46hdX8J/11-Senza-ti-tolo-150x100-acrilica-2012.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  }, {
-    url: 'https://i.postimg.cc/mD2qqPBz/IMG-7768-copy.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  }, {
-    url: 'https://i.postimg.cc/gjJx1y06/2-Pelas-Ruas-de-Bruxelas-0-98x0-98-bx-res.jpg',
-    nome: 'Pelas Ruas de Bruxelas',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  },
-  {
-    url: 'https://i.postimg.cc/Jn5r3DKs/21-de-IMG-1093.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'horizontal',
-  }, {
-    url: 'https://i.postimg.cc/J46hdX8J/11-Senza-ti-tolo-150x100-acrilica-2012.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  }, {
-    url: 'https://i.postimg.cc/mD2qqPBz/IMG-7768-copy.jpg',
-    nome: 'Sem título',
-    data: '2020',
-    material: '',
-    orientation: 'vertical',
-  }
-]
-
+import { data } from './obras.js';
 
 $(document).ready(function(){
 
-$.each(obras, function(i, value){ 
-  $("#content").append("<div class='showcase fade'><img src='" + obras[i].url + "' class='img' /><br><leg><i>" + obras[i].nome + "</i>, " + obras[i].ano + "</leg></div>");
-  $("#gallery").append("<div class='imagemGaleria'><img src='" + obras[i].url + "' class='imgGallery-" + obras[i].orientation + "' /><div class='legendaGaleria'>" + obras[i].nome + ", " + obras[i].ano + "</div></div>");
+$.each(data.obras, function(i, value){ 
+  console.log(data.obras[i])
+  $("#content").append("<div class='showcase fade'><img src='" + data.obras[i].url + "' class='img' /><br><leg><i>" + data.obras[i].nome + "</i>, " + data.obras[i].ano + "</leg></div>");
+  $("#gallery").append("<div class='imagemGaleria'><img src='" + data.obras[i].url + "' class='imgGallery-" + data.obras[i].orientation + "' /><div class='legendaGaleria'>" + data.obras[i].nome + ", " + data.obras[i].ano + "</div></div>");
 }
 );
 showSlides(slideIndex);
