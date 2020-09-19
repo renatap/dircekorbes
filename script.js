@@ -61,8 +61,10 @@ $.each(data.obras, function(i, value){
   $("#gallery").append("<div class='imagemGaleria'><img src='" + data.obras[i].url + "' class='imgGallery-" + data.obras[i].orientation + "' /><div class='legendaGaleria'>" + data.obras[i].nome + ", " + data.obras[i].ano + "</div></div>");
 }
 );
+$("#boxGallery").append("<div class='showcase'></div>") // coloquei esse pra não causar erro por não ter usado showSlides() nesta pagina. depois ver o que fazer com isso
 $("#navbar").append("<div class='navlinks' id='logo'><h4>DIRCE KÖRBES</h4></div><div class='navbar-landscape'><div class='navlinks-landscape'>Séries</div><div class='navlinks-landscape'>Exposições</div><div class='navlinks-landscape'>Biografia</div></div><div class='navlinks-landscape' id='icons'><img src='icons/facebook.png' height='20px' style='opacity:0.5;margin-right:3px'>  <img src='icons/instagram.png' height='20px' style='opacity:0.5;margin-right:5px'>  <img src='icons/mail.png' height='20px' style='opacity:0.5'></div>")
 showSlides(slideIndex);
+$("#bottom-bar").append("<div class='navlinks-portrait' id='icons'></div><a href='javascript:void(0);' onclick='hamburgerMenu()'><img src='icons/menu.png' class='icon'></a>  <img src='icons/facebook.png' class='icon'>  <img src='icons/instagram.png' class='icon'>  <img src='icons/mail.png' class='icon'></div>")
 
 });
 
@@ -105,6 +107,6 @@ function hamburgerMenu() {
 
 // pegar as coleções de imagens e começar de fato a alimentar o site, pra ver como vou apresentar as seções, como vou separar os JSON em partes.
 
-// fazer o JSON um arquivo separado que a Dirce possa preencher.
+// ver se dá pra colocar o conteudo do hamburger menu no codigo JS tb.
 
-// como deixar o site mais modular: em vez de colocar o menu em todas as paginas, linkar uma função JS que faz o append do menu.
+// tentar colocar de novo aquela parada de linkar obras.js aqui. Tinha funcionado mas ai as funcoes quebraram, nao sei pq. ver branch collectionPage, navigation-separated
