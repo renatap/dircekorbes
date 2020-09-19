@@ -61,6 +61,7 @@ $.each(data.obras, function(i, value){
   $("#gallery").append("<div class='imagemGaleria'><img src='" + data.obras[i].url + "' class='imgGallery-" + data.obras[i].orientation + "' /><div class='legendaGaleria'>" + data.obras[i].nome + ", " + data.obras[i].ano + "</div></div>");
 }
 );
+$("#navbar").append("<div class='navlinks' id='logo'><h4>DIRCE KÖRBES</h4></div><div class='navbar-landscape'><div class='navlinks-landscape'>Séries</div><div class='navlinks-landscape'>Exposições</div><div class='navlinks-landscape'>Biografia</div></div><div class='navlinks-landscape' id='icons'><img src='icons/facebook.png' height='20px' style='opacity:0.5;margin-right:3px'>  <img src='icons/instagram.png' height='20px' style='opacity:0.5;margin-right:5px'>  <img src='icons/mail.png' height='20px' style='opacity:0.5'></div>")
 showSlides(slideIndex);
 
 });
